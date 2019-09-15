@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='top_info'>
+    <image src="../../images/jc_top_bg@2x.png" class="top_info_bg"></image>
+    <view class='top_info_con'>
+      <image src="../../images/Bitmap@2x.png" class="top_info_header"></image>
+      <view>
+        <text class='name'>王可可</text>
+        <text class='dis'>上次诊断</text>
+        <text class='dis'>2019-07-21</text>
+      </view>
+    </view>
+  </view>
+  <view class='camera_container'>
+    <camera device-position="{{devicePosition}}" flash="off" binderror="error" class='camera'>
+      <cover-view class="camera_front">
+        <cover-image class="mengban" src="../../images/mengban@2x.png" />
+        <cover-view class='zheng_process'>
+          <cover-view class="zheng_step active">
+            <cover-image src='../../images/zheng_m_s.png'></cover-image>
+            <cover-view class='text'>面诊</cover-view>
+          </cover-view>
+          
+          <cover-view class="step_line {{step!==1 && 'active'}}"></cover-view>
+
+          <cover-view class="zheng_step {{step!==1 && 'active'}}">
+            <cover-image class='zheng_step' src="{{step!==1 ? '../../images/zheng_s_s.png' : '../../images/zheng_s_n.png'}}"></cover-image>
+            <cover-view class='text'>舌诊</cover-view>
+          </cover-view>
+
+          <cover-view class="step_line {{step===3 && 'active'}}"></cover-view>
+
+          <cover-view class="zheng_step {{step===3 && 'active'}}">
+            <cover-image class='zheng_step' src='../../images/zheng_w_n.png'></cover-image>
+            <cover-view class='text'>问诊</cover-view>
+          </cover-view>
+
+        </cover-view>
+
+        <cover-view class='controls'>
+          <cover-view class='tips'>拍照在虚线内 识别更准确</cover-view>
+          <cover-image class='camera_btn' src='../../images/jc_ps@2x.png' bindtap="takePhoto"></cover-image>
+          <cover-image class='camera_switch' src="../../images/icon_fanzhuan@2x.png" bindtap="changeDevicePosition"></cover-image>
+        </cover-view>
+
+        <cover-image class='she_tishi' src="../../images/she_tishi.png"></cover-image>
+
+      </cover-view>   
+    </camera>
+    <!-- <button type="primary" bindtap="takePhoto">拍照</button>
+    <view>预览</view>
+    <image mode="widthFix" src="{{src}}"></image> -->
+  </view>
+</view>
