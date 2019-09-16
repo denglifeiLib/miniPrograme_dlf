@@ -99,6 +99,13 @@
   width: 68rpx;
   height: 68rpx;
 }
+.she_tishi{
+  position: absolute;
+  left: 218rpx;
+  top: 34%;
+  width: 316rpx;
+  height: 252rpx;
+}
 .mengban{
   display: block;
   width: 100%;

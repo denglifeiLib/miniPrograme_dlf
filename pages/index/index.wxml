@@ -43,7 +43,7 @@
           <cover-image class='camera_switch' src="../../images/icon_fanzhuan@2x.png" bindtap="changeDevicePosition"></cover-image>
         </cover-view>
 
-        <cover-image class='she_tishi' src="../../images/she_tishi.png"></cover-image>
+        <cover-image hidden="{{step!==2}}" class='she_tishi' src="../../images/she_tishi.png"></cover-image>
 
       </cover-view>   
     </camera>
